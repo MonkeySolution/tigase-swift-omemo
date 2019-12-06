@@ -338,7 +338,7 @@ open class OMEMOModule: AbstractPEPModule {
                         keyEl.setAttribute("prekey", value: "true");
                     }
                     return keyEl;
-                case .failure(let error):
+                case .failure( _ /* let error */):
                     return nil;
                 }
             }).filter({ (el) -> Bool in
