@@ -20,8 +20,10 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
 
-public enum IdentityStatus: Int {
+@objc public enum IdentityStatus: Int, CaseIterable, RealmEnum {
     case compromisedActive = -2
     case compromisedInactive = -1
     case undecidedActive = 0
@@ -100,7 +102,7 @@ public enum IdentityStatus: Int {
     }
 }
 
-public enum Trust {
+@objc public enum Trust:Int, CaseIterable, RealmEnum {
     case compromised
     case undecided
     case trusted

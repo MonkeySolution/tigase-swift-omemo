@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C3B08182239CC10600B76056 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B08181239CC10600B76056 /* Realm.framework */; };
+		C3B08186239CC10800B76056 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B08185239CC10800B76056 /* RealmSwift.framework */; };
 		FE719E5C2270C8C2007CEEC9 /* TigaseSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE719E5B2270C8C2007CEEC9 /* TigaseSwift.framework */; };
 		FE719E5D2270CA25007CEEC9 /* utility.c in Sources */ = {isa = PBXBuildFile; fileRef = FEB1568C225FB5A8009B0709 /* utility.c */; };
 		FE719E5E2270CA25007CEEC9 /* fe_isequal.c in Sources */ = {isa = PBXBuildFile; fileRef = FEB1568D225FB5A8009B0709 /* fe_isequal.c */; };
@@ -386,6 +388,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C3B08181239CC10600B76056 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = ../../carthage_frameworks/Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
+		C3B08185239CC10800B76056 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = ../../carthage_frameworks/Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		FE719E5B2270C8C2007CEEC9 /* TigaseSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TigaseSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE9CDF0A226874A8001039C3 /* SignalError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignalError.swift; sourceTree = "<group>"; };
 		FE9CDF0E226F33C8001039C3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
@@ -593,7 +597,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B08182239CC10600B76056 /* Realm.framework in Frameworks */,
 				FE719E5C2270C8C2007CEEC9 /* TigaseSwift.framework in Frameworks */,
+				C3B08186239CC10800B76056 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,6 +630,8 @@
 		FE02DBAC2259E52400FA08EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C3B08185239CC10800B76056 /* RealmSwift.framework */,
+				C3B08181239CC10600B76056 /* Realm.framework */,
 				FE719E5B2270C8C2007CEEC9 /* TigaseSwift.framework */,
 				FEB1584C225FB702009B0709 /* TigaseSwift.framework */,
 			);
@@ -1401,6 +1409,7 @@
 		FE02DB962259E12A00FA08EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../../carthage_frameworks/Carthage/Build/iOS";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				ONLY_ACTIVE_ARCH = YES;
@@ -1412,6 +1421,7 @@
 		FE02DB972259E12A00FA08EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "${PROJECT_DIR}/../../carthage_frameworks/Carthage/Build/iOS";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_NAME = "";
@@ -1637,7 +1647,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/TigaseSwift\\ OMEMO\\ iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TigaseSwift\\ OMEMO\\ iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1722,7 +1735,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/TigaseSwift\\ OMEMO\\ iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TigaseSwift\\ OMEMO\\ iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
